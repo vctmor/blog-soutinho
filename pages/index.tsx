@@ -33,9 +33,12 @@ export default function Home(props) {
 
 
 export async function getStaticProps(){
+const gitRubResponse = await fetch("https://api.github.com/users/victormoreira")
+.then(res => res.json())
+
   return {
     props: {
-      avatar_url: "https://avatars.githubusercontent.com/u/125832442?v=4"
+      avatar_url: gitRubResponse.avatar_url
     }
   }
 
