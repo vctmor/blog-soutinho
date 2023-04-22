@@ -1,4 +1,6 @@
+import React from "react"
 import styled from "styled-components"
+
 /*
 import {
 
@@ -10,7 +12,7 @@ import Cards from '../components/cards'
 
 const Title = styled.h1`
 font-size: 50px;
-color: ${({ theme }) => theme.colors.primary};
+// color: ${({ theme }) => theme.colors.primary};
 `
 
 export default function Home() {
