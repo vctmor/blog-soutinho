@@ -3,6 +3,10 @@ import Link from 'next/link'
 import React from "react"
 import { join } from "path"
 
+import Footer from '../components/Footer';
+
+
+
 const SubTitle = styled.h2`
   background-color: var(--primary);
   color: white;
@@ -45,10 +49,8 @@ export default function Home(props) {
 
       </section>
     </div>
-
-    </div>
-
-    
+        <Footer/>
+    </div>   
 
     )
 }
