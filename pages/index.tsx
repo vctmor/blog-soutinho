@@ -26,6 +26,24 @@ export default function Home(props) {
       </header>
 
       <div>
+
+      <section className="postsContainer">
+        <SubTitle>Posts</SubTitle>
+        {
+           <article>
+            <a href='/'>
+              post.js, ou .tsx 01!
+            </a>
+             
+             <p>Muito legal esta publicação</p> 
+             
+             <p>     
+             </p>
+           </article>
+        }
+
+      </section>
+
       <section className="postsContainer">
         <SubTitle>Repositórios Github</SubTitle>
         {
@@ -33,8 +51,7 @@ export default function Home(props) {
             return(
               <article
               key={project.repo}
-
-               className="postsContainer__post">
+              className="postsContainer__post">
                 
                 <p>Título: <a href={project.html_url}>
                    
