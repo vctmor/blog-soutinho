@@ -27,11 +27,15 @@ export default function Home(props) {
           props.repos.map((project) => {
             return(
               <article className="postsContainer__post">
-                <a href="/">
-                  {project.repo}
-                </a>
+                
+                <p>Título: <a href={project.html_url}>
+                   
+                   {project.name}
+                   
+                 </a></p> 
+                
                 <p>
-                  {project.description}
+                  Descrição: {project.description}
                 </p>
               </article>
             )
@@ -55,7 +59,7 @@ const gitRubResponse = await fetch("https://api.github.com/users/victormoreira")
 
 
 
-const reposfav = await fetch('https://api.github.com/users/victormoreira')
+const repos = await fetch('https://api.github.com/users/vctmor/repos')
 .then(res => res.json())
 
 
@@ -63,7 +67,7 @@ const reposfav = await fetch('https://api.github.com/users/victormoreira')
     
     props: {
       avatar_url: gitRubResponse.avatar_url,
-      reposfav,
+      repos,
       
     }
     
