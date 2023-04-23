@@ -3,13 +3,12 @@ import Link from 'next/link'
 import React from "react"
 import { join } from "path"
 
-import Footer from '../components/Footer';
-
-const Title = styled.h1`
-font-size: 50px;
-// color: ${({ theme }) => theme.colors.primary};
-`
-
+const SubTitle = styled.h2`
+  background-color: var(--primary);
+  color: white;
+  display: inline-block;
+  padding: 5px;
+`;
 export default function Home(props) {
   return (
     <div>
@@ -24,7 +23,7 @@ export default function Home(props) {
 
       <div>
       <section className="postsContainer">
-        <h2>Repositórios Favoritos</h2>
+        <SubTitle>Repositórios Github</SubTitle>
         {
           props.repos.map((project) => {
             return(
