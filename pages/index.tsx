@@ -31,7 +31,10 @@ export default function Home(props) {
         {
           props.repos.map((project) => {
             return(
-              <article className="postsContainer__post">
+              <article
+              key={project.repo}
+
+               className="postsContainer__post">
                 
                 <p>Título: <a href={project.html_url}>
                    
